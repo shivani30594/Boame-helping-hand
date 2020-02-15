@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>.: Demo :.</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<script type="text/javascript" src="ckeditor.js"></script>
+	<script src="sample.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<h1>
+		Demo ckeditor
+	</h1>
+	<form action="sample_posteddata.php" method="post">
+		<p>
+			
+			<textarea cols="80" id="editor1" name="editor1" rows="10"></textarea>
+			<script type="text/javascript">
+			//<![CDATA[
+
+				// This call can be placed at any point after the
+				// <textarea>, or inside a <head><script> in a
+				// window.onload event handler.
+
+				// Replace the <textarea id="editor"> with an CKEditor
+				// instance, using default configurations.
+				CKEDITOR.replace( 'editor1',
+                {
+                    filebrowserBrowseUrl :'plugins/filemanager/browser/default/browser.html?Connector=http://localhost/ckeditor/plugins/filemanager/connectors/php/connector.php',
+                    filebrowserImageBrowseUrl : 'plugins/filemanager/browser/default/browser.html?Type=Image&Connector=http://localhost/ckeditor/plugins/filemanager/connectors/php/connector.php',
+                    filebrowserFlashBrowseUrl :'plugins/filemanager/browser/default/browser.html?Type=Flash&Connector=http://localhost/ckeditor/plugins/filemanager/connectors/php/connector.php',
+					filebrowserUploadUrl  :'http://localhost/ckeditor/plugins/filemanager/connectors/php/upload.php?Type=File',
+					filebrowserImageUploadUrl : 'http://localhost/ckeditor/plugins/filemanager/connectors/php/upload.php?Type=Image',
+					filebrowserFlashUploadUrl : 'http://localhost/ckeditor/plugins/filemanager/connectors/php/upload.php?Type=Flash'
+				});
+
+			//]]>
+			</script>
+		</p>
+		
+	</form>
+	
+</body>
+</html>
